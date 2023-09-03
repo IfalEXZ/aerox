@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yamaha Aerox</title>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <section class="main">
+      <header class="navbar">
+        <a href="#"
+          ><img src="images/yamaha.png" alt="yamaha" class="logo"
+        /></a>
+        <ul class="navigation">
+          <li><a href="#">Spesifikasi</a></li>
+          <li><a href="#">Fitur</a></li>
+          <li><a href="#">Apa yang baru?</a></li>
+          <li><a href="#">Kontak</a></li>
+        </ul>
+      </header>
+      <div class="content">
+        <h2>Stylish and <span>Trendy</span></h2>
+        <a href="#" class="btn">Ride Now</a>
+        <img src="images/aerox.png" alt="aerox" class="aerox" />
+      </div>
+
+      <!-- Slider Content -->
+      <div class="slider">
+        <div class="slides active">
+          <h2><span>Engine</span><br />155cc</h2>
+          <h2><span>Compression Ratio</span><br />11.6:1</h2>
+        </div>
+        <div class="slides">
+          <h2><span>Tyre Type</span><br />Tubeless</h2>
+          <h2><span>Fuel Tank</span><br />5.5 L</h2>
+        </div>
+        <div class="slides">
+          <h2><span>Maximum Power</span><br />15 hp</h2>
+          <h2><span>Max Power RPM</span><br />8000 rpm</h2>
+        </div>
+      </div>
+
+      <div class="footer">
+        <ul class="sci">
+          <li>
+            <a href="http://facebook.com"
+              ><ion-icon name="logo-facebook"></ion-icon
+            ></a>
+          </li>
+          <li>
+            <a href="http://twitter.com"
+              ><ion-icon name="logo-twitter"></ion-icon
+            ></a>
+          </li>
+          <li>
+            <a href="http://instagram.com"
+              ><ion-icon name="logo-instagram"></ion-icon
+            ></a>
+          </li>
+        </ul>
+        <div class="dots">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+      </div>
+    </section>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script>
+      const slides = document.querySelectorAll('.slides')
+      const dots = document.querySelectorAll('.dot')
+
+      function setActive(i){
+        for(slide of slides)
+        slide.classList.remove('active');
+        slides[i].classList.add('active');
+        for(dot of dots)
+        dot.classList.remove('active');
+        dots[i].classList.add('active');
+      }
+
+      for(let j = 0; j < dots.length; j++){
+        dots[j].addEventListener('click', function(){
+          setActive(j)
+        })
+      }
+    </script>
+  </body>
+</html>
